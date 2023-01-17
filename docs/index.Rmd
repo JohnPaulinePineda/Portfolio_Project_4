@@ -519,7 +519,7 @@ ggpar(SurvivalTimeInWeek.KaplanMeier.ByGroup,
 
 ```
 
-##  1.5 Model Development
+##  1.5 Model Development Summary
 |
 | Cox proportional hazards regression analysis involving the response variable <span style="color: #FF0000">Week</span>, factor variable <span style="color: #FF0000">Group</span> and covariate variable <span style="color: #FF0000">WBC</span>  showed that :
 |
@@ -1070,7 +1070,7 @@ ggcoxfunctional(Surv(Week, Status) ~ WBC,
 
 ```
 
-##  1.6 References
+# **2. References**
 |
 | **[Book]** [Survival Analysis : A Self-Learning Text](https://link.springer.com/book/10.1007/978-1-4419-6646-9) by David Kleinbaum and Mitchel Klein
 | **[Book]** [Applied Survival Analysis Using R](https://link.springer.com/book/10.1007/978-3-319-31245-3) by Dirk Moore
