@@ -500,6 +500,17 @@ This document presents a non-exhaustive list of survival analysis and
 descriptive modelling methods for a two-group right-censored data with
 time-independent variables using various helpful packages in
 <mark style="background-color: #CCECFF"><strong>R</strong></mark>.<br />
+<br />
+Survival analysis corresponds to a set of statistical approaches for
+time-to-event data, where the outcome variable of interest is the time
+until an event occurs. Descriptive modelling involves the formulation of
+statistical models to identify patterns and relationships that can be
+used for statistical inferences given the predictors and response
+variables. The methods applied in this study (mostly contained in the
+<mark style="background-color: #CCECFF"><strong>survival</strong></mark>
+package) attempt to explore the relationship between factors and both
+the survival time and event outcomes, while evaluating their effects
+through statistical hypotheses testing.<br />
 </div>
 <div id="sample-data" class="section level2">
 <h2>1.1 Sample Data</h2>
@@ -932,12 +943,12 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
 <span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">missing =</span> <span class="st">&quot;no&quot;</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>() <span class="sc">%&gt;%</span> </span>
 <span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_p</span>()</span></code></pre></div>
-<div id="kvtermmtpq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="pccsnzgffd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#kvtermmtpq .gt_table {
+#pccsnzgffd .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -962,7 +973,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-left-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_heading {
+#pccsnzgffd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -974,12 +985,12 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_caption {
+#pccsnzgffd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kvtermmtpq .gt_title {
+#pccsnzgffd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -991,7 +1002,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-width: 0;
 }
 
-#kvtermmtpq .gt_subtitle {
+#pccsnzgffd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1003,13 +1014,13 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-top-width: 0;
 }
 
-#kvtermmtpq .gt_bottom_border {
+#pccsnzgffd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_col_headings {
+#pccsnzgffd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1024,7 +1035,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_col_heading {
+#pccsnzgffd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1044,7 +1055,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   overflow-x: hidden;
 }
 
-#kvtermmtpq .gt_column_spanner_outer {
+#pccsnzgffd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1056,15 +1067,15 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 4px;
 }
 
-#kvtermmtpq .gt_column_spanner_outer:first-child {
+#pccsnzgffd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kvtermmtpq .gt_column_spanner_outer:last-child {
+#pccsnzgffd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kvtermmtpq .gt_column_spanner {
+#pccsnzgffd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1076,7 +1087,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   width: 100%;
 }
 
-#kvtermmtpq .gt_group_heading {
+#pccsnzgffd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1102,7 +1113,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   text-align: left;
 }
 
-#kvtermmtpq .gt_empty_group_heading {
+#pccsnzgffd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1117,15 +1128,15 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   vertical-align: middle;
 }
 
-#kvtermmtpq .gt_from_md > :first-child {
+#pccsnzgffd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kvtermmtpq .gt_from_md > :last-child {
+#pccsnzgffd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kvtermmtpq .gt_row {
+#pccsnzgffd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1144,7 +1155,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   overflow-x: hidden;
 }
 
-#kvtermmtpq .gt_stub {
+#pccsnzgffd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1157,7 +1168,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#kvtermmtpq .gt_stub_row_group {
+#pccsnzgffd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1171,11 +1182,11 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   vertical-align: top;
 }
 
-#kvtermmtpq .gt_row_group_first td {
+#pccsnzgffd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kvtermmtpq .gt_summary_row {
+#pccsnzgffd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1185,16 +1196,16 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#kvtermmtpq .gt_first_summary_row {
+#pccsnzgffd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_first_summary_row.thick {
+#pccsnzgffd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kvtermmtpq .gt_last_summary_row {
+#pccsnzgffd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1204,7 +1215,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_grand_summary_row {
+#pccsnzgffd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1214,7 +1225,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#kvtermmtpq .gt_first_grand_summary_row {
+#pccsnzgffd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1224,11 +1235,11 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-top-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_striped {
+#pccsnzgffd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kvtermmtpq .gt_table_body {
+#pccsnzgffd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1237,7 +1248,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_footnotes {
+#pccsnzgffd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1251,7 +1262,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_footnote {
+#pccsnzgffd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1260,7 +1271,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#kvtermmtpq .gt_sourcenotes {
+#pccsnzgffd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1274,7 +1285,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#kvtermmtpq .gt_sourcenote {
+#pccsnzgffd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1282,64 +1293,64 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#kvtermmtpq .gt_left {
+#pccsnzgffd .gt_left {
   text-align: left;
 }
 
-#kvtermmtpq .gt_center {
+#pccsnzgffd .gt_center {
   text-align: center;
 }
 
-#kvtermmtpq .gt_right {
+#pccsnzgffd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kvtermmtpq .gt_font_normal {
+#pccsnzgffd .gt_font_normal {
   font-weight: normal;
 }
 
-#kvtermmtpq .gt_font_bold {
+#pccsnzgffd .gt_font_bold {
   font-weight: bold;
 }
 
-#kvtermmtpq .gt_font_italic {
+#pccsnzgffd .gt_font_italic {
   font-style: italic;
 }
 
-#kvtermmtpq .gt_super {
+#pccsnzgffd .gt_super {
   font-size: 65%;
 }
 
-#kvtermmtpq .gt_footnote_marks {
+#pccsnzgffd .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#kvtermmtpq .gt_asterisk {
+#pccsnzgffd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kvtermmtpq .gt_indent_1 {
+#pccsnzgffd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kvtermmtpq .gt_indent_2 {
+#pccsnzgffd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kvtermmtpq .gt_indent_3 {
+#pccsnzgffd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kvtermmtpq .gt_indent_4 {
+#pccsnzgffd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kvtermmtpq .gt_indent_5 {
+#pccsnzgffd .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1507,12 +1518,12 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">times =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">20</span>,<span class="dv">23</span>),</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">label_header =</span> <span class="st">&quot;**Week {time}**&quot;</span></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<div id="npzmnqgabk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jrnrasuanl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#npzmnqgabk .gt_table {
+#jrnrasuanl .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1537,7 +1548,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-left-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_heading {
+#jrnrasuanl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1549,12 +1560,12 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_caption {
+#jrnrasuanl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#npzmnqgabk .gt_title {
+#jrnrasuanl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1566,7 +1577,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-width: 0;
 }
 
-#npzmnqgabk .gt_subtitle {
+#jrnrasuanl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1578,13 +1589,13 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-top-width: 0;
 }
 
-#npzmnqgabk .gt_bottom_border {
+#jrnrasuanl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_col_headings {
+#jrnrasuanl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1599,7 +1610,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_col_heading {
+#jrnrasuanl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1619,7 +1630,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   overflow-x: hidden;
 }
 
-#npzmnqgabk .gt_column_spanner_outer {
+#jrnrasuanl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1631,15 +1642,15 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 4px;
 }
 
-#npzmnqgabk .gt_column_spanner_outer:first-child {
+#jrnrasuanl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#npzmnqgabk .gt_column_spanner_outer:last-child {
+#jrnrasuanl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#npzmnqgabk .gt_column_spanner {
+#jrnrasuanl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1651,7 +1662,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   width: 100%;
 }
 
-#npzmnqgabk .gt_group_heading {
+#jrnrasuanl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1677,7 +1688,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   text-align: left;
 }
 
-#npzmnqgabk .gt_empty_group_heading {
+#jrnrasuanl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1692,15 +1703,15 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   vertical-align: middle;
 }
 
-#npzmnqgabk .gt_from_md > :first-child {
+#jrnrasuanl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#npzmnqgabk .gt_from_md > :last-child {
+#jrnrasuanl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#npzmnqgabk .gt_row {
+#jrnrasuanl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1719,7 +1730,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   overflow-x: hidden;
 }
 
-#npzmnqgabk .gt_stub {
+#jrnrasuanl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1732,7 +1743,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#npzmnqgabk .gt_stub_row_group {
+#jrnrasuanl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1746,11 +1757,11 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   vertical-align: top;
 }
 
-#npzmnqgabk .gt_row_group_first td {
+#jrnrasuanl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#npzmnqgabk .gt_summary_row {
+#jrnrasuanl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1760,16 +1771,16 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#npzmnqgabk .gt_first_summary_row {
+#jrnrasuanl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_first_summary_row.thick {
+#jrnrasuanl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#npzmnqgabk .gt_last_summary_row {
+#jrnrasuanl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1779,7 +1790,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_grand_summary_row {
+#jrnrasuanl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1789,7 +1800,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#npzmnqgabk .gt_first_grand_summary_row {
+#jrnrasuanl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1799,11 +1810,11 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-top-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_striped {
+#jrnrasuanl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#npzmnqgabk .gt_table_body {
+#jrnrasuanl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1812,7 +1823,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_footnotes {
+#jrnrasuanl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1826,7 +1837,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_footnote {
+#jrnrasuanl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1835,7 +1846,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#npzmnqgabk .gt_sourcenotes {
+#jrnrasuanl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1849,7 +1860,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#npzmnqgabk .gt_sourcenote {
+#jrnrasuanl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1857,64 +1868,64 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#npzmnqgabk .gt_left {
+#jrnrasuanl .gt_left {
   text-align: left;
 }
 
-#npzmnqgabk .gt_center {
+#jrnrasuanl .gt_center {
   text-align: center;
 }
 
-#npzmnqgabk .gt_right {
+#jrnrasuanl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#npzmnqgabk .gt_font_normal {
+#jrnrasuanl .gt_font_normal {
   font-weight: normal;
 }
 
-#npzmnqgabk .gt_font_bold {
+#jrnrasuanl .gt_font_bold {
   font-weight: bold;
 }
 
-#npzmnqgabk .gt_font_italic {
+#jrnrasuanl .gt_font_italic {
   font-style: italic;
 }
 
-#npzmnqgabk .gt_super {
+#jrnrasuanl .gt_super {
   font-size: 65%;
 }
 
-#npzmnqgabk .gt_footnote_marks {
+#jrnrasuanl .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#npzmnqgabk .gt_asterisk {
+#jrnrasuanl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#npzmnqgabk .gt_indent_1 {
+#jrnrasuanl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#npzmnqgabk .gt_indent_2 {
+#jrnrasuanl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#npzmnqgabk .gt_indent_3 {
+#jrnrasuanl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#npzmnqgabk .gt_indent_4 {
+#jrnrasuanl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#npzmnqgabk .gt_indent_5 {
+#jrnrasuanl .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2047,12 +2058,12 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">times =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">20</span>,<span class="dv">23</span>),</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">label_header =</span> <span class="st">&quot;**Week {time}**&quot;</span></span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<div id="djfpgfwsrz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="pbzkofuiyz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#djfpgfwsrz .gt_table {
+#pbzkofuiyz .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2077,7 +2088,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-left-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_heading {
+#pbzkofuiyz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2089,12 +2100,12 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_caption {
+#pbzkofuiyz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#djfpgfwsrz .gt_title {
+#pbzkofuiyz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2106,7 +2117,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-width: 0;
 }
 
-#djfpgfwsrz .gt_subtitle {
+#pbzkofuiyz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2118,13 +2129,13 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-top-width: 0;
 }
 
-#djfpgfwsrz .gt_bottom_border {
+#pbzkofuiyz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_col_headings {
+#pbzkofuiyz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2139,7 +2150,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_col_heading {
+#pbzkofuiyz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2159,7 +2170,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   overflow-x: hidden;
 }
 
-#djfpgfwsrz .gt_column_spanner_outer {
+#pbzkofuiyz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2171,15 +2182,15 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 4px;
 }
 
-#djfpgfwsrz .gt_column_spanner_outer:first-child {
+#pbzkofuiyz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#djfpgfwsrz .gt_column_spanner_outer:last-child {
+#pbzkofuiyz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#djfpgfwsrz .gt_column_spanner {
+#pbzkofuiyz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2191,7 +2202,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   width: 100%;
 }
 
-#djfpgfwsrz .gt_group_heading {
+#pbzkofuiyz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2217,7 +2228,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   text-align: left;
 }
 
-#djfpgfwsrz .gt_empty_group_heading {
+#pbzkofuiyz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2232,15 +2243,15 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   vertical-align: middle;
 }
 
-#djfpgfwsrz .gt_from_md > :first-child {
+#pbzkofuiyz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#djfpgfwsrz .gt_from_md > :last-child {
+#pbzkofuiyz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#djfpgfwsrz .gt_row {
+#pbzkofuiyz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2259,7 +2270,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   overflow-x: hidden;
 }
 
-#djfpgfwsrz .gt_stub {
+#pbzkofuiyz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2272,7 +2283,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#djfpgfwsrz .gt_stub_row_group {
+#pbzkofuiyz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2286,11 +2297,11 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   vertical-align: top;
 }
 
-#djfpgfwsrz .gt_row_group_first td {
+#pbzkofuiyz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#djfpgfwsrz .gt_summary_row {
+#pbzkofuiyz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2300,16 +2311,16 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#djfpgfwsrz .gt_first_summary_row {
+#pbzkofuiyz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_first_summary_row.thick {
+#pbzkofuiyz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#djfpgfwsrz .gt_last_summary_row {
+#pbzkofuiyz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2319,7 +2330,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_grand_summary_row {
+#pbzkofuiyz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2329,7 +2340,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#djfpgfwsrz .gt_first_grand_summary_row {
+#pbzkofuiyz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2339,11 +2350,11 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-top-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_striped {
+#pbzkofuiyz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#djfpgfwsrz .gt_table_body {
+#pbzkofuiyz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2352,7 +2363,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-bottom-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_footnotes {
+#pbzkofuiyz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2366,7 +2377,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_footnote {
+#pbzkofuiyz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -2375,7 +2386,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#djfpgfwsrz .gt_sourcenotes {
+#pbzkofuiyz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2389,7 +2400,7 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   border-right-color: #D3D3D3;
 }
 
-#djfpgfwsrz .gt_sourcenote {
+#pbzkofuiyz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2397,64 +2408,64 @@ Placebo=14%), <span style="color: #FF0000">Week=20</span>
   padding-right: 5px;
 }
 
-#djfpgfwsrz .gt_left {
+#pbzkofuiyz .gt_left {
   text-align: left;
 }
 
-#djfpgfwsrz .gt_center {
+#pbzkofuiyz .gt_center {
   text-align: center;
 }
 
-#djfpgfwsrz .gt_right {
+#pbzkofuiyz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#djfpgfwsrz .gt_font_normal {
+#pbzkofuiyz .gt_font_normal {
   font-weight: normal;
 }
 
-#djfpgfwsrz .gt_font_bold {
+#pbzkofuiyz .gt_font_bold {
   font-weight: bold;
 }
 
-#djfpgfwsrz .gt_font_italic {
+#pbzkofuiyz .gt_font_italic {
   font-style: italic;
 }
 
-#djfpgfwsrz .gt_super {
+#pbzkofuiyz .gt_super {
   font-size: 65%;
 }
 
-#djfpgfwsrz .gt_footnote_marks {
+#pbzkofuiyz .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#djfpgfwsrz .gt_asterisk {
+#pbzkofuiyz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#djfpgfwsrz .gt_indent_1 {
+#pbzkofuiyz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#djfpgfwsrz .gt_indent_2 {
+#pbzkofuiyz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#djfpgfwsrz .gt_indent_3 {
+#pbzkofuiyz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#djfpgfwsrz .gt_indent_4 {
+#pbzkofuiyz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#djfpgfwsrz .gt_indent_5 {
+#pbzkofuiyz .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2765,12 +2776,12 @@ indicating a fairly good model fit for the final survival model.<br />
 ## Score (logrank) test = 17.25  on 1 df,   p=3e-05</code></pre>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(DBP.Analysis.UnivariateCoxPH.Group, </span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">exponentiate =</span> <span class="cn">TRUE</span>) </span></code></pre></div>
-<div id="xoyvcsgddk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="oensorlriu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xoyvcsgddk .gt_table {
+#oensorlriu .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2795,7 +2806,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-left-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_heading {
+#oensorlriu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2807,12 +2818,12 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_caption {
+#oensorlriu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xoyvcsgddk .gt_title {
+#oensorlriu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2824,7 +2835,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-width: 0;
 }
 
-#xoyvcsgddk .gt_subtitle {
+#oensorlriu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2836,13 +2847,13 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-width: 0;
 }
 
-#xoyvcsgddk .gt_bottom_border {
+#oensorlriu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_col_headings {
+#oensorlriu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2857,7 +2868,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_col_heading {
+#oensorlriu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2877,7 +2888,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#xoyvcsgddk .gt_column_spanner_outer {
+#oensorlriu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2889,15 +2900,15 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 4px;
 }
 
-#xoyvcsgddk .gt_column_spanner_outer:first-child {
+#oensorlriu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xoyvcsgddk .gt_column_spanner_outer:last-child {
+#oensorlriu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xoyvcsgddk .gt_column_spanner {
+#oensorlriu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2909,7 +2920,7 @@ indicating a fairly good model fit for the final survival model.<br />
   width: 100%;
 }
 
-#xoyvcsgddk .gt_group_heading {
+#oensorlriu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2935,7 +2946,7 @@ indicating a fairly good model fit for the final survival model.<br />
   text-align: left;
 }
 
-#xoyvcsgddk .gt_empty_group_heading {
+#oensorlriu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2950,15 +2961,15 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: middle;
 }
 
-#xoyvcsgddk .gt_from_md > :first-child {
+#oensorlriu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xoyvcsgddk .gt_from_md > :last-child {
+#oensorlriu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xoyvcsgddk .gt_row {
+#oensorlriu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2977,7 +2988,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#xoyvcsgddk .gt_stub {
+#oensorlriu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2990,7 +3001,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#xoyvcsgddk .gt_stub_row_group {
+#oensorlriu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3004,11 +3015,11 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: top;
 }
 
-#xoyvcsgddk .gt_row_group_first td {
+#oensorlriu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xoyvcsgddk .gt_summary_row {
+#oensorlriu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3018,16 +3029,16 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#xoyvcsgddk .gt_first_summary_row {
+#oensorlriu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_first_summary_row.thick {
+#oensorlriu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xoyvcsgddk .gt_last_summary_row {
+#oensorlriu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3037,7 +3048,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_grand_summary_row {
+#oensorlriu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3047,7 +3058,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#xoyvcsgddk .gt_first_grand_summary_row {
+#oensorlriu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3057,11 +3068,11 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_striped {
+#oensorlriu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xoyvcsgddk .gt_table_body {
+#oensorlriu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3070,7 +3081,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_footnotes {
+#oensorlriu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3084,7 +3095,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_footnote {
+#oensorlriu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -3093,7 +3104,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#xoyvcsgddk .gt_sourcenotes {
+#oensorlriu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3107,7 +3118,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#xoyvcsgddk .gt_sourcenote {
+#oensorlriu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3115,64 +3126,64 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#xoyvcsgddk .gt_left {
+#oensorlriu .gt_left {
   text-align: left;
 }
 
-#xoyvcsgddk .gt_center {
+#oensorlriu .gt_center {
   text-align: center;
 }
 
-#xoyvcsgddk .gt_right {
+#oensorlriu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xoyvcsgddk .gt_font_normal {
+#oensorlriu .gt_font_normal {
   font-weight: normal;
 }
 
-#xoyvcsgddk .gt_font_bold {
+#oensorlriu .gt_font_bold {
   font-weight: bold;
 }
 
-#xoyvcsgddk .gt_font_italic {
+#oensorlriu .gt_font_italic {
   font-style: italic;
 }
 
-#xoyvcsgddk .gt_super {
+#oensorlriu .gt_super {
   font-size: 65%;
 }
 
-#xoyvcsgddk .gt_footnote_marks {
+#oensorlriu .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#xoyvcsgddk .gt_asterisk {
+#oensorlriu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xoyvcsgddk .gt_indent_1 {
+#oensorlriu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xoyvcsgddk .gt_indent_2 {
+#oensorlriu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xoyvcsgddk .gt_indent_3 {
+#oensorlriu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xoyvcsgddk .gt_indent_4 {
+#oensorlriu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xoyvcsgddk .gt_indent_5 {
+#oensorlriu .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -3279,12 +3290,12 @@ indicating a fairly good model fit for the final survival model.<br />
 ## Score (logrank) test = 36.62  on 1 df,   p=1e-09</code></pre>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(DBP.Analysis.UnivariateCoxPH.WBC, </span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">exponentiate =</span> <span class="cn">TRUE</span>) </span></code></pre></div>
-<div id="uliflvuzto" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="rnfgffxqyq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#uliflvuzto .gt_table {
+#rnfgffxqyq .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -3309,7 +3320,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-left-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_heading {
+#rnfgffxqyq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3321,12 +3332,12 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_caption {
+#rnfgffxqyq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#uliflvuzto .gt_title {
+#rnfgffxqyq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3338,7 +3349,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-width: 0;
 }
 
-#uliflvuzto .gt_subtitle {
+#rnfgffxqyq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3350,13 +3361,13 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-width: 0;
 }
 
-#uliflvuzto .gt_bottom_border {
+#rnfgffxqyq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_col_headings {
+#rnfgffxqyq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3371,7 +3382,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_col_heading {
+#rnfgffxqyq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3391,7 +3402,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#uliflvuzto .gt_column_spanner_outer {
+#rnfgffxqyq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3403,15 +3414,15 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 4px;
 }
 
-#uliflvuzto .gt_column_spanner_outer:first-child {
+#rnfgffxqyq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uliflvuzto .gt_column_spanner_outer:last-child {
+#rnfgffxqyq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uliflvuzto .gt_column_spanner {
+#rnfgffxqyq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3423,7 +3434,7 @@ indicating a fairly good model fit for the final survival model.<br />
   width: 100%;
 }
 
-#uliflvuzto .gt_group_heading {
+#rnfgffxqyq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3449,7 +3460,7 @@ indicating a fairly good model fit for the final survival model.<br />
   text-align: left;
 }
 
-#uliflvuzto .gt_empty_group_heading {
+#rnfgffxqyq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3464,15 +3475,15 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: middle;
 }
 
-#uliflvuzto .gt_from_md > :first-child {
+#rnfgffxqyq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uliflvuzto .gt_from_md > :last-child {
+#rnfgffxqyq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uliflvuzto .gt_row {
+#rnfgffxqyq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3491,7 +3502,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#uliflvuzto .gt_stub {
+#rnfgffxqyq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3504,7 +3515,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#uliflvuzto .gt_stub_row_group {
+#rnfgffxqyq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3518,11 +3529,11 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: top;
 }
 
-#uliflvuzto .gt_row_group_first td {
+#rnfgffxqyq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#uliflvuzto .gt_summary_row {
+#rnfgffxqyq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3532,16 +3543,16 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#uliflvuzto .gt_first_summary_row {
+#rnfgffxqyq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_first_summary_row.thick {
+#rnfgffxqyq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#uliflvuzto .gt_last_summary_row {
+#rnfgffxqyq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3551,7 +3562,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_grand_summary_row {
+#rnfgffxqyq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3561,7 +3572,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#uliflvuzto .gt_first_grand_summary_row {
+#rnfgffxqyq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3571,11 +3582,11 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_striped {
+#rnfgffxqyq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uliflvuzto .gt_table_body {
+#rnfgffxqyq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3584,7 +3595,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_footnotes {
+#rnfgffxqyq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3598,7 +3609,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_footnote {
+#rnfgffxqyq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -3607,7 +3618,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#uliflvuzto .gt_sourcenotes {
+#rnfgffxqyq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3621,7 +3632,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#uliflvuzto .gt_sourcenote {
+#rnfgffxqyq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3629,64 +3640,64 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#uliflvuzto .gt_left {
+#rnfgffxqyq .gt_left {
   text-align: left;
 }
 
-#uliflvuzto .gt_center {
+#rnfgffxqyq .gt_center {
   text-align: center;
 }
 
-#uliflvuzto .gt_right {
+#rnfgffxqyq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uliflvuzto .gt_font_normal {
+#rnfgffxqyq .gt_font_normal {
   font-weight: normal;
 }
 
-#uliflvuzto .gt_font_bold {
+#rnfgffxqyq .gt_font_bold {
   font-weight: bold;
 }
 
-#uliflvuzto .gt_font_italic {
+#rnfgffxqyq .gt_font_italic {
   font-style: italic;
 }
 
-#uliflvuzto .gt_super {
+#rnfgffxqyq .gt_super {
   font-size: 65%;
 }
 
-#uliflvuzto .gt_footnote_marks {
+#rnfgffxqyq .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#uliflvuzto .gt_asterisk {
+#rnfgffxqyq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#uliflvuzto .gt_indent_1 {
+#rnfgffxqyq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#uliflvuzto .gt_indent_2 {
+#rnfgffxqyq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#uliflvuzto .gt_indent_3 {
+#rnfgffxqyq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#uliflvuzto .gt_indent_4 {
+#rnfgffxqyq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#uliflvuzto .gt_indent_5 {
+#rnfgffxqyq .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -3764,12 +3775,12 @@ indicating a fairly good model fit for the final survival model.<br />
 <span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">label_header =</span> <span class="st">&quot;**Median Survival**&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_n</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_nevent</span>()</span></code></pre></div>
-<div id="klvrlqbkrm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="iznnncgxrs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#klvrlqbkrm .gt_table {
+#iznnncgxrs .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -3794,7 +3805,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-left-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_heading {
+#iznnncgxrs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3806,12 +3817,12 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_caption {
+#iznnncgxrs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#klvrlqbkrm .gt_title {
+#iznnncgxrs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3823,7 +3834,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-width: 0;
 }
 
-#klvrlqbkrm .gt_subtitle {
+#iznnncgxrs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3835,13 +3846,13 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-width: 0;
 }
 
-#klvrlqbkrm .gt_bottom_border {
+#iznnncgxrs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_col_headings {
+#iznnncgxrs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3856,7 +3867,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_col_heading {
+#iznnncgxrs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3876,7 +3887,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#klvrlqbkrm .gt_column_spanner_outer {
+#iznnncgxrs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3888,15 +3899,15 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 4px;
 }
 
-#klvrlqbkrm .gt_column_spanner_outer:first-child {
+#iznnncgxrs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#klvrlqbkrm .gt_column_spanner_outer:last-child {
+#iznnncgxrs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#klvrlqbkrm .gt_column_spanner {
+#iznnncgxrs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3908,7 +3919,7 @@ indicating a fairly good model fit for the final survival model.<br />
   width: 100%;
 }
 
-#klvrlqbkrm .gt_group_heading {
+#iznnncgxrs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3934,7 +3945,7 @@ indicating a fairly good model fit for the final survival model.<br />
   text-align: left;
 }
 
-#klvrlqbkrm .gt_empty_group_heading {
+#iznnncgxrs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3949,15 +3960,15 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: middle;
 }
 
-#klvrlqbkrm .gt_from_md > :first-child {
+#iznnncgxrs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#klvrlqbkrm .gt_from_md > :last-child {
+#iznnncgxrs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#klvrlqbkrm .gt_row {
+#iznnncgxrs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3976,7 +3987,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#klvrlqbkrm .gt_stub {
+#iznnncgxrs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3989,7 +4000,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#klvrlqbkrm .gt_stub_row_group {
+#iznnncgxrs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4003,11 +4014,11 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: top;
 }
 
-#klvrlqbkrm .gt_row_group_first td {
+#iznnncgxrs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#klvrlqbkrm .gt_summary_row {
+#iznnncgxrs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4017,16 +4028,16 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#klvrlqbkrm .gt_first_summary_row {
+#iznnncgxrs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_first_summary_row.thick {
+#iznnncgxrs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#klvrlqbkrm .gt_last_summary_row {
+#iznnncgxrs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4036,7 +4047,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_grand_summary_row {
+#iznnncgxrs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4046,7 +4057,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#klvrlqbkrm .gt_first_grand_summary_row {
+#iznnncgxrs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4056,11 +4067,11 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_striped {
+#iznnncgxrs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#klvrlqbkrm .gt_table_body {
+#iznnncgxrs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4069,7 +4080,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_footnotes {
+#iznnncgxrs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4083,7 +4094,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_footnote {
+#iznnncgxrs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -4092,7 +4103,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#klvrlqbkrm .gt_sourcenotes {
+#iznnncgxrs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4106,7 +4117,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#klvrlqbkrm .gt_sourcenote {
+#iznnncgxrs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4114,64 +4125,64 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#klvrlqbkrm .gt_left {
+#iznnncgxrs .gt_left {
   text-align: left;
 }
 
-#klvrlqbkrm .gt_center {
+#iznnncgxrs .gt_center {
   text-align: center;
 }
 
-#klvrlqbkrm .gt_right {
+#iznnncgxrs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#klvrlqbkrm .gt_font_normal {
+#iznnncgxrs .gt_font_normal {
   font-weight: normal;
 }
 
-#klvrlqbkrm .gt_font_bold {
+#iznnncgxrs .gt_font_bold {
   font-weight: bold;
 }
 
-#klvrlqbkrm .gt_font_italic {
+#iznnncgxrs .gt_font_italic {
   font-style: italic;
 }
 
-#klvrlqbkrm .gt_super {
+#iznnncgxrs .gt_super {
   font-size: 65%;
 }
 
-#klvrlqbkrm .gt_footnote_marks {
+#iznnncgxrs .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#klvrlqbkrm .gt_asterisk {
+#iznnncgxrs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#klvrlqbkrm .gt_indent_1 {
+#iznnncgxrs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#klvrlqbkrm .gt_indent_2 {
+#iznnncgxrs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#klvrlqbkrm .gt_indent_3 {
+#iznnncgxrs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#klvrlqbkrm .gt_indent_4 {
+#iznnncgxrs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#klvrlqbkrm .gt_indent_5 {
+#iznnncgxrs .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -4406,12 +4417,12 @@ indicating a fairly good model fit for the final survival model.<br />
 ## Score (logrank) test = 46.07  on 2 df,   p=1e-10</code></pre>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(DBP.Analysis.MultivariateCoxPH.GroupWBC, </span>
 <span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">exponentiate =</span> <span class="cn">TRUE</span>) </span></code></pre></div>
-<div id="mkeuilfodd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="bfqxgfwyck" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#mkeuilfodd .gt_table {
+#bfqxgfwyck .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -4436,7 +4447,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-left-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_heading {
+#bfqxgfwyck .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4448,12 +4459,12 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_caption {
+#bfqxgfwyck .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mkeuilfodd .gt_title {
+#bfqxgfwyck .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4465,7 +4476,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-width: 0;
 }
 
-#mkeuilfodd .gt_subtitle {
+#bfqxgfwyck .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4477,13 +4488,13 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-width: 0;
 }
 
-#mkeuilfodd .gt_bottom_border {
+#bfqxgfwyck .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_col_headings {
+#bfqxgfwyck .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4498,7 +4509,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_col_heading {
+#bfqxgfwyck .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4518,7 +4529,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#mkeuilfodd .gt_column_spanner_outer {
+#bfqxgfwyck .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4530,15 +4541,15 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 4px;
 }
 
-#mkeuilfodd .gt_column_spanner_outer:first-child {
+#bfqxgfwyck .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mkeuilfodd .gt_column_spanner_outer:last-child {
+#bfqxgfwyck .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mkeuilfodd .gt_column_spanner {
+#bfqxgfwyck .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4550,7 +4561,7 @@ indicating a fairly good model fit for the final survival model.<br />
   width: 100%;
 }
 
-#mkeuilfodd .gt_group_heading {
+#bfqxgfwyck .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4576,7 +4587,7 @@ indicating a fairly good model fit for the final survival model.<br />
   text-align: left;
 }
 
-#mkeuilfodd .gt_empty_group_heading {
+#bfqxgfwyck .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4591,15 +4602,15 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: middle;
 }
 
-#mkeuilfodd .gt_from_md > :first-child {
+#bfqxgfwyck .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mkeuilfodd .gt_from_md > :last-child {
+#bfqxgfwyck .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mkeuilfodd .gt_row {
+#bfqxgfwyck .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4618,7 +4629,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#mkeuilfodd .gt_stub {
+#bfqxgfwyck .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4631,7 +4642,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#mkeuilfodd .gt_stub_row_group {
+#bfqxgfwyck .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4645,11 +4656,11 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: top;
 }
 
-#mkeuilfodd .gt_row_group_first td {
+#bfqxgfwyck .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mkeuilfodd .gt_summary_row {
+#bfqxgfwyck .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4659,16 +4670,16 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#mkeuilfodd .gt_first_summary_row {
+#bfqxgfwyck .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_first_summary_row.thick {
+#bfqxgfwyck .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mkeuilfodd .gt_last_summary_row {
+#bfqxgfwyck .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4678,7 +4689,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_grand_summary_row {
+#bfqxgfwyck .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4688,7 +4699,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#mkeuilfodd .gt_first_grand_summary_row {
+#bfqxgfwyck .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4698,11 +4709,11 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_striped {
+#bfqxgfwyck .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mkeuilfodd .gt_table_body {
+#bfqxgfwyck .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4711,7 +4722,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_footnotes {
+#bfqxgfwyck .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4725,7 +4736,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_footnote {
+#bfqxgfwyck .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -4734,7 +4745,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#mkeuilfodd .gt_sourcenotes {
+#bfqxgfwyck .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4748,7 +4759,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#mkeuilfodd .gt_sourcenote {
+#bfqxgfwyck .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4756,64 +4767,64 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#mkeuilfodd .gt_left {
+#bfqxgfwyck .gt_left {
   text-align: left;
 }
 
-#mkeuilfodd .gt_center {
+#bfqxgfwyck .gt_center {
   text-align: center;
 }
 
-#mkeuilfodd .gt_right {
+#bfqxgfwyck .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mkeuilfodd .gt_font_normal {
+#bfqxgfwyck .gt_font_normal {
   font-weight: normal;
 }
 
-#mkeuilfodd .gt_font_bold {
+#bfqxgfwyck .gt_font_bold {
   font-weight: bold;
 }
 
-#mkeuilfodd .gt_font_italic {
+#bfqxgfwyck .gt_font_italic {
   font-style: italic;
 }
 
-#mkeuilfodd .gt_super {
+#bfqxgfwyck .gt_super {
   font-size: 65%;
 }
 
-#mkeuilfodd .gt_footnote_marks {
+#bfqxgfwyck .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#mkeuilfodd .gt_asterisk {
+#bfqxgfwyck .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mkeuilfodd .gt_indent_1 {
+#bfqxgfwyck .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mkeuilfodd .gt_indent_2 {
+#bfqxgfwyck .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mkeuilfodd .gt_indent_3 {
+#bfqxgfwyck .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mkeuilfodd .gt_indent_4 {
+#bfqxgfwyck .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mkeuilfodd .gt_indent_5 {
+#bfqxgfwyck .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -4933,12 +4944,12 @@ indicating a fairly good model fit for the final survival model.<br />
 ## Score (logrank) test = 49.86  on 3 df,   p=9e-11</code></pre>
 <div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(DBP.Analysis.MultivariateCoxPH.GroupWBC.WithInteraction, </span>
 <span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">exponentiate =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<div id="fahdzgyebs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="klxjhcaler" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#fahdzgyebs .gt_table {
+#klxjhcaler .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -4963,7 +4974,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-left-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_heading {
+#klxjhcaler .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4975,12 +4986,12 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_caption {
+#klxjhcaler .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fahdzgyebs .gt_title {
+#klxjhcaler .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4992,7 +5003,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-width: 0;
 }
 
-#fahdzgyebs .gt_subtitle {
+#klxjhcaler .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5004,13 +5015,13 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-width: 0;
 }
 
-#fahdzgyebs .gt_bottom_border {
+#klxjhcaler .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_col_headings {
+#klxjhcaler .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5025,7 +5036,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_col_heading {
+#klxjhcaler .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5045,7 +5056,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#fahdzgyebs .gt_column_spanner_outer {
+#klxjhcaler .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5057,15 +5068,15 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 4px;
 }
 
-#fahdzgyebs .gt_column_spanner_outer:first-child {
+#klxjhcaler .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fahdzgyebs .gt_column_spanner_outer:last-child {
+#klxjhcaler .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fahdzgyebs .gt_column_spanner {
+#klxjhcaler .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5077,7 +5088,7 @@ indicating a fairly good model fit for the final survival model.<br />
   width: 100%;
 }
 
-#fahdzgyebs .gt_group_heading {
+#klxjhcaler .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5103,7 +5114,7 @@ indicating a fairly good model fit for the final survival model.<br />
   text-align: left;
 }
 
-#fahdzgyebs .gt_empty_group_heading {
+#klxjhcaler .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5118,15 +5129,15 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: middle;
 }
 
-#fahdzgyebs .gt_from_md > :first-child {
+#klxjhcaler .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fahdzgyebs .gt_from_md > :last-child {
+#klxjhcaler .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fahdzgyebs .gt_row {
+#klxjhcaler .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5145,7 +5156,7 @@ indicating a fairly good model fit for the final survival model.<br />
   overflow-x: hidden;
 }
 
-#fahdzgyebs .gt_stub {
+#klxjhcaler .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5158,7 +5169,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#fahdzgyebs .gt_stub_row_group {
+#klxjhcaler .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5172,11 +5183,11 @@ indicating a fairly good model fit for the final survival model.<br />
   vertical-align: top;
 }
 
-#fahdzgyebs .gt_row_group_first td {
+#klxjhcaler .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fahdzgyebs .gt_summary_row {
+#klxjhcaler .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5186,16 +5197,16 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#fahdzgyebs .gt_first_summary_row {
+#klxjhcaler .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_first_summary_row.thick {
+#klxjhcaler .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fahdzgyebs .gt_last_summary_row {
+#klxjhcaler .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5205,7 +5216,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_grand_summary_row {
+#klxjhcaler .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5215,7 +5226,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#fahdzgyebs .gt_first_grand_summary_row {
+#klxjhcaler .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5225,11 +5236,11 @@ indicating a fairly good model fit for the final survival model.<br />
   border-top-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_striped {
+#klxjhcaler .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fahdzgyebs .gt_table_body {
+#klxjhcaler .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5238,7 +5249,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-bottom-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_footnotes {
+#klxjhcaler .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5252,7 +5263,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_footnote {
+#klxjhcaler .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -5261,7 +5272,7 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#fahdzgyebs .gt_sourcenotes {
+#klxjhcaler .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5275,7 +5286,7 @@ indicating a fairly good model fit for the final survival model.<br />
   border-right-color: #D3D3D3;
 }
 
-#fahdzgyebs .gt_sourcenote {
+#klxjhcaler .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5283,64 +5294,64 @@ indicating a fairly good model fit for the final survival model.<br />
   padding-right: 5px;
 }
 
-#fahdzgyebs .gt_left {
+#klxjhcaler .gt_left {
   text-align: left;
 }
 
-#fahdzgyebs .gt_center {
+#klxjhcaler .gt_center {
   text-align: center;
 }
 
-#fahdzgyebs .gt_right {
+#klxjhcaler .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fahdzgyebs .gt_font_normal {
+#klxjhcaler .gt_font_normal {
   font-weight: normal;
 }
 
-#fahdzgyebs .gt_font_bold {
+#klxjhcaler .gt_font_bold {
   font-weight: bold;
 }
 
-#fahdzgyebs .gt_font_italic {
+#klxjhcaler .gt_font_italic {
   font-style: italic;
 }
 
-#fahdzgyebs .gt_super {
+#klxjhcaler .gt_super {
   font-size: 65%;
 }
 
-#fahdzgyebs .gt_footnote_marks {
+#klxjhcaler .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#fahdzgyebs .gt_asterisk {
+#klxjhcaler .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fahdzgyebs .gt_indent_1 {
+#klxjhcaler .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fahdzgyebs .gt_indent_2 {
+#klxjhcaler .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fahdzgyebs .gt_indent_3 {
+#klxjhcaler .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fahdzgyebs .gt_indent_4 {
+#klxjhcaler .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fahdzgyebs .gt_indent_5 {
+#klxjhcaler .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
