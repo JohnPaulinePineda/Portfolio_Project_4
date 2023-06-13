@@ -483,6 +483,9 @@ ggpar(SurvivalTimeInWeek.KaplanMeier.ByGroup,
 ```
 
 ### 1.4.3 Log Rank Test
+|
+| [Log Rank Test](https://link.springer.com/book/10.1007/978-1-4419-6646-9) evaluates the null hypothesis of no difference in survival between two or more independent groups by comparing the entire survival experience. The method involves generating a sequential list of time values corresponding to an event or censoring from two or more independent groups; determining the counts of event-free observations, event and expected events for each time value; calculating the Chi-Square test statistic based on these counts; and evaluating the determined test statistic against the rejection region.
+|
 ```{r section_1.4.3, warning=FALSE, message=FALSE, fig.width=15, fig.height=8, fig.align="center"}
 ##################################
 # Conducting the Log Rank Test
