@@ -600,7 +600,7 @@ tbl_regression(DBP.Analysis.UnivariateCoxPH.Group,
 (ggforest(DBP.Analysis.UnivariateCoxPH.Group, 
           data=DBP.Analysis,
           main = "",
-          fontsize = 1.5))
+          fontsize = 0.9))
 
 ##################################
 # Plotting the Kaplan-Meier survival curves
@@ -650,7 +650,7 @@ tbl_regression(DBP.Analysis.UnivariateCoxPH.WBC,
 (ggforest(DBP.Analysis.UnivariateCoxPH.WBC, 
           data=DBP.Analysis,
           main = "",
-          fontsize = 1.5))
+          fontsize = 0.9))
 
 ##################################
 # Plotting the Kaplan-Meier survival curves
@@ -724,7 +724,7 @@ tbl_regression(DBP.Analysis.MultivariateCoxPH.GroupWBC,
 (DBP.Analysis.MultivariateCoxPH.GroupWBC.ForestPlot <- ggforest(DBP.Analysis.MultivariateCoxPH.GroupWBC , 
           data=DBP.Analysis,
           main = "",
-          fontsize = 1.5))
+          fontsize = 0.9))
 
 ##################################
 # Plotting the Kaplan-Meier survival curves
@@ -774,7 +774,7 @@ tbl_regression(DBP.Analysis.MultivariateCoxPH.GroupWBC.WithInteraction,
 (DBP.Analysis.MultivariateCoxPH.GroupWBC.WithInteraction.ForestPlot <- ggforest(DBP.Analysis.MultivariateCoxPH.GroupWBC.WithInteraction, 
           data=DBP.Analysis,
           main = "",
-          fontsize = 1.5))
+          fontsize = 0.9))
 
 ##################################
 # Plotting the Kaplan-Meier survival curves
@@ -983,7 +983,7 @@ tbl_regression(DBP.Analysis.MultivariateCoxPH.GroupWBC,
 (DBP.Analysis.MultivariateCoxPH.GroupWBC.ForestPlot <- ggforest(DBP.Analysis.MultivariateCoxPH.GroupWBC , 
           data=DBP.Analysis,
           main = "",
-          fontsize = 1.5))
+          fontsize = 0.90))
 
 ##################################
 # Plotting the Kaplan-Meier survival curves
