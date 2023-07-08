@@ -435,18 +435,18 @@ SurvivalTimeInWeek.KaplanMeier.Baseline <- ggsurvplot(DBP.Analysis.Baseline.Kapl
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      palette = c("#000000"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.Baseline,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 ##################################
 # Computing the Kaplan-Meier survival estimates
@@ -490,19 +490,19 @@ SurvivalTimeInWeek.KaplanMeier.ByGroup <- ggsurvplot(DBP.Analysis.KaplanMeierEst
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      legend.labs = c("Placebo", "Treatment"),
                                                      palette = c("#3259A0","#FF5050"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.ByGroup,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 ```
 
 </details>
@@ -540,19 +540,19 @@ SurvivalTimeInWeek.KaplanMeier.ByGroup <- ggsurvplot(DBP.Analysis.KaplanMeierEst
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      legend.labs = c("Placebo", "Treatment"),
                                                      palette = c("#3259A0","#FF5050"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.ByGroup,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 ```
 
@@ -622,18 +622,18 @@ SurvivalTimeInWeek.KaplanMeier.UnivariateCoxPH.Group <- ggsurvplot(DBP.Analysis.
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      palette = c("#000000"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.UnivariateCoxPH.Group,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 ##################################
 # Formulating a Univariate Cox Proportional Hazards Model
@@ -672,18 +672,18 @@ SurvivalTimeInWeek.KaplanMeier.UnivariateCoxPH.WBC <- ggsurvplot(DBP.Analysis.Un
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      palette = c("#000000"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.UnivariateCoxPH.WBC,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 
 ##################################
@@ -746,18 +746,18 @@ SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC <- ggsurvplot(DBP.Anal
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      palette = c("#000000"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 ##################################
 # Formulating a Multivariate Cox Proportional Hazards Model
@@ -797,18 +797,18 @@ SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC.WithInteraction <- ggs
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      palette = c("#000000"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC.WithInteraction,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 ##################################
 # Formulating complete and reduced
@@ -1005,18 +1005,18 @@ SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC <- ggsurvplot(DBP.Anal
                                                      risk.table.title="Number at Risk (Survival Probability)",
                                                      risk.table.y.text.col = FALSE,
                                                      risk.table.y.text = TRUE,
-                                                     fontsize = 5,
+                                                     fontsize = 3,
                                                      ncensor.plot = FALSE,
                                                      surv.median.line = "hv",
                                                      palette = c("#000000"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 ##################################
 # Plotting the Kaplan-Meier survival curves
@@ -1047,19 +1047,19 @@ SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC.GroupAdjustedByWBC <- 
                                                                          risk.table.title="Number at Risk (Survival Probability)",
                                                                          risk.table.y.text.col = FALSE,
                                                                          risk.table.y.text = TRUE,
-                                                                         fontsize = 5,
+                                                                         fontsize = 3,
                                                                          ncensor.plot = FALSE,
                                                                          surv.median.line = "hv",
                                                                          legend.labs = c("Placebo", "Treatment"),
                                                                          palette = c("#3259A0","#FF5050"))
 
 ggpar(SurvivalTimeInWeek.KaplanMeier.MultivariateCoxPH.GroupWBC.GroupAdjustedByWBC,
-      font.title = c(25,"bold"),
-      font.x = c(20,"bold"),
-      font.y = c(20,"bold"),
-      font.legend=c(20,"bold"),
-      font.xtickslab=c(15,"bold","black"),
-      font.ytickslab=c(15,"bold","black"))
+      font.title = c(14,"bold"),
+      font.x = c(12,"bold"),
+      font.y = c(12,"bold"),
+      font.legend=c(12),
+      font.xtickslab=c(9,"black"),
+      font.ytickslab=c(9,"black"))
 
 ##################################
 # Testing the proportional hazards assumption
