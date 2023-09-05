@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.width=15, fig.height=10)
 ```
 # **1. Table of Contents**
 |
-| This project implements the survival analysis and descriptive modelling steps for a two-group right-censored data with time-independent variables using the **Cox Proportional Hazards Model** with various helpful packages in <mark style="background-color: #CCECFF">**R**</mark>. The **Kaplan-Meier Survival Curves** and **Log-Rank Test** were applied during the differential analysis of the survival data between groups. All predictors’ prognostic significance were individually and simultaneously evaluated using **Univariate and Multivariate Cox Proportional Hazards Models**, respectively. The discrimination power of the resulting models were assessed using the **Harrel’s Concordance Index**. The final prognostic model was internally validated using Bootstrap Validation with Optimism Estimation and evaluated for compliance on all required model assumptions using the appropriate diagnostics.
+| This project implements the survival analysis and descriptive modelling steps for a two-group right-censored data with time-independent variables using the **Cox Proportional Hazards Model** with various helpful packages in <mark style="background-color: #CCECFF">**R**</mark>. The **Kaplan-Meier Survival Curves** and **Log-Rank Test** were applied during the differential analysis of the survival data between groups. All predictors’ prognostic significance were individually and simultaneously evaluated using **Univariate and Multivariate Cox Proportional Hazards Models**, respectively. The discrimination power of the resulting models were assessed using the **Harrel’s Concordance Index**. The final prognostic model was internally validated using Bootstrap Validation with Optimism Estimation and evaluated for compliance on all required model assumptions using the appropriate diagnostics. All results were consolidated in a [<span style="color: #FF0000">**Summary**</span>](#summary) presented at the end of the document.
 |
 | Survival analysis corresponds to a set of statistical approaches for time-to-event data, where the outcome variable of interest is the time until an event occurs. Descriptive modelling involves the formulation of statistical models to identify patterns and relationships that can be used for statistical inferences given the predictors and response variables. The methods applied in this study (mostly contained in the <mark style="background-color: #CCECFF">**survival**</mark> package) attempt to explore the relationship between factors and both the survival time and event outcomes, while evaluating their effects through statistical hypotheses testing.
 |
@@ -122,8 +122,6 @@ PDA <- DBP.Response.Covariate
 </details>
 
 ##  1.2 Data Quality Assessment
-|
-| Data quality assessment:
 |
 | **[A]** No missing observations noted for any response and covariate variable.
 |
@@ -1150,8 +1148,12 @@ ggcoxfunctional(Surv(Week, Status) ~ WBC,
 ```
 
 </details>
-
-# **2. References**
+|
+# **2. Summary** <a name="summary"></a>
+|
+| ![](D:/Github_Codes/ProjectPortfolio/Portfolio_Project_4/docs/Project4_Summary.png)
+|
+# **3. References**
 |
 | **[Book]** [Survival Analysis : A Self-Learning Text](https://link.springer.com/book/10.1007/978-1-4419-6646-9) by David Kleinbaum and Mitchel Klein
 | **[Book]** [Applied Survival Analysis Using R](https://link.springer.com/book/10.1007/978-3-319-31245-3) by Dirk Moore
