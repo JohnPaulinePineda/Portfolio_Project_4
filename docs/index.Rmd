@@ -1,6 +1,6 @@
 ---
 title: "Supervised Learning : Survival Analysis and Descriptive Modelling for a Two-Group Right-Censored Data with Time-Independent Variables Using Cox Proportional Hazards Model"
-author: "John Pauline Pineda"
+author: "<b><a href='https://github.com/JohnPaulinePineda'>John Pauline Pineda</a></b>"
 date: "May 5, 2022"
 output: 
   html_document:
@@ -67,18 +67,18 @@ library(finalfit)
 library(knitr)
 library(gtsummary)
 
-
 ##################################
-# Setting the working directory
+# Defining file paths
 ##################################
-setwd("D:/R_Codes/Markdown/SurvivalAnalysis")
+DATASETS_PATH <- file.path("datasets")
 
 ##################################
 # Reading and creating the complete dataset
 ##################################
-DBP.Complete <- read.csv('Leukemia.csv',
+DBP.Complete <- read.csv(file.path("..", DATASETS_PATH, "Leukemia.csv"),
                 na.strings=c("NA","NaN"," ",""),
                 stringsAsFactors = T)
+
 
 ##################################
 # Performing a general exploration of the dataset
@@ -134,11 +134,6 @@ PDA <- DBP.Response.Covariate
 <details><summary><mark style="background-color: #000000;color: #FFFFFF">**Code Chunk | Output**</mark></summary>
 
 ```{r section_1.2, warning=FALSE, message=FALSE}
-##################################
-# Restoring the working directory
-##################################
-setwd("D:/R_Codes/Markdown")
-
 ##################################
 # Reusing the response-covariate dataset
 ##################################
@@ -1151,7 +1146,7 @@ ggcoxfunctional(Surv(Week, Status) ~ WBC,
 |
 # **2. Summary** <a name="summary"></a>
 |
-| ![](D:/Github_Codes/ProjectPortfolio/Portfolio_Project_4/docs/Project4_Summary.png)
+| ![](D:/Github_Codes/ProjectPortfolio/Portfolio_Project_4/images/Project4_Summary.png)
 |
 # **3. References**
 |
